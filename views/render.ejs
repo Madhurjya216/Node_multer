@@ -1,0 +1,25 @@
+<!-- render.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Render Page</title>
+</head>
+<body>
+  <h1>Uploaded Files</h1>
+
+  <% files.forEach(file => { %>
+    <p>
+      File: <%= file.file %><br>
+      Path: <%= file.path %><br>
+      <a href="<%= file.path %>" target="_blank">View File</a>
+    </p>
+    <hr>
+  <% }); %> 
+
+  <a href="/upload">Upload another file</a>
+  
+</body>
+</html>
